@@ -57,3 +57,34 @@ for i in `seq 0 $value`
 do
     echo $i
 done
+
+
+
+
+
+Script 5:
+#!/bin/bash
+
+sum=0
+count=0
+
+echo -n "Introduce un numero (preisona 0 para finalizar): "
+read value
+
+while [ $value -ne 0 ]; do
+  sum=$((sum + value))
+  count=$((count + 1))
+
+  echo -n "Introduce un valor (0 para quitar): "
+  read value
+done
+
+
+if [ $count -ne 0 ]; then
+  avg=$((sum / count))
+else
+  avg=0
+fi
+
+echo "Total sum: $sum"
+echo "Promedio: $avg"
