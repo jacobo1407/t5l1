@@ -40,3 +40,20 @@ elif [ $grade -lt 9 ]; then
 else
   echo "Excelente"
 fi
+
+
+Script 4:
+#!/bin/bash
+echo
+read -p"Dime un valor mayor que  0:" value
+
+if [ $value -le 0 ]
+then
+    echo "Error: el valor debe ser mayor que 0."
+    exit 1
+fi
+
+for i in `seq 0 $value`
+do
+    echo $i
+done
